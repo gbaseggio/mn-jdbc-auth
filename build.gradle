@@ -22,6 +22,7 @@ micronaut {
 dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut.security:micronaut-security-annotations")
+    annotationProcessor 'org.projectlombok:lombok:1.18.18'
     implementation("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-runtime")
     implementation("javax.annotation:javax.annotation-api")
@@ -32,6 +33,9 @@ dependencies {
     implementation("io.micronaut.security:micronaut-security-jwt")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
+    compileOnly 'org.projectlombok:lombok:1.18.18'
+    testCompileOnly 'org.projectlombok:lombok:1.18.18'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
 }
 
 
